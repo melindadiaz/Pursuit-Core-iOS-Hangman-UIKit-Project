@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5p0-WK-ggz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,127 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-Pn-ljH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangmanTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qsz-Kf-Gvl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="139.00000000000006"/>
+                                <color key="backgroundColor" red="0.57151544989543157" green="0.57151544989543157" blue="0.57151544989543157" alpha="0.57943600170410958" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to 2 Player Hangman!! Player 1, please enter any valid word below. Press submit before passing to 2nd player." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dju-aQ-mev">
+                                <rect key="frame" x="-20.5" y="390.5" width="455" height="115"/>
+                                <color key="backgroundColor" red="0.54113791182436555" green="0.54113791182436555" blue="0.54113791182436555" alpha="0.69164704622465745" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Word Here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYC-P3-X4N">
+                                <rect key="frame" x="121" y="545.5" width="172.5" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to 8 lowercase characters are valid. Special characters , accents or spaces are invalid. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-95-8QO">
+                                <rect key="frame" x="62" y="250.5" width="290" height="98"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38B-fW-aYz">
+                                <rect key="frame" x="174" y="609.5" width="66" height="33"/>
+                                <color key="backgroundColor" red="0.59729273418984763" green="0.59729273418984763" blue="0.59729273418984763" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Submit">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="BradleyHandITCTT-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="1hY-QL-iz5" kind="show" id="4cV-0Z-jDR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2S9-Pn-ljH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0u4-R1-lJH"/>
+                            <constraint firstItem="dju-aQ-mev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5M9-QZ-c4f"/>
+                            <constraint firstAttribute="trailing" secondItem="2S9-Pn-ljH" secondAttribute="trailing" id="8kx-GG-OLJ"/>
+                            <constraint firstItem="2S9-Pn-ljH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dn1-KA-6IM"/>
+                            <constraint firstItem="dju-aQ-mev" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HYR-6s-8qw"/>
+                            <constraint firstItem="sg9-95-8QO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="Ja8-F8-kun"/>
+                            <constraint firstItem="dju-aQ-mev" firstAttribute="top" secondItem="sg9-95-8QO" secondAttribute="bottom" constant="42" id="ObZ-iQ-i5s"/>
+                            <constraint firstItem="38B-fW-aYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfl-Wf-sJO"/>
+                            <constraint firstItem="qsz-Kf-Gvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sp6-G1-dd0"/>
+                            <constraint firstAttribute="bottom" secondItem="2S9-Pn-ljH" secondAttribute="bottom" id="Ugn-nv-hQx"/>
+                            <constraint firstItem="qsz-Kf-Gvl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UqM-K6-xc5"/>
+                            <constraint firstItem="38B-fW-aYz" firstAttribute="top" secondItem="SYC-P3-X4N" secondAttribute="bottom" constant="30" id="WQT-yp-Dev"/>
+                            <constraint firstItem="SYC-P3-X4N" firstAttribute="top" secondItem="dju-aQ-mev" secondAttribute="bottom" constant="40" id="XfB-wB-ggJ"/>
+                            <constraint firstItem="38B-fW-aYz" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.16" id="YZo-7N-nl7"/>
+                            <constraint firstItem="sg9-95-8QO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZnI-5Z-2nf"/>
+                            <constraint firstItem="qsz-Kf-Gvl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bWi-21-XAv"/>
+                            <constraint firstItem="sg9-95-8QO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.12" id="dm4-74-Ouc"/>
+                            <constraint firstItem="SYC-P3-X4N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f1U-iX-kOY"/>
+                            <constraint firstItem="dju-aQ-mev" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1.1" id="qS9-mj-UYy"/>
+                            <constraint firstItem="qsz-Kf-Gvl" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.17" id="sG0-5X-oYx"/>
+                            <constraint firstAttribute="trailing" secondItem="qsz-Kf-Gvl" secondAttribute="trailing" id="vUt-RM-hYI"/>
+                            <constraint firstItem="2S9-Pn-ljH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vmr-2o-Bgg"/>
+                            <constraint firstItem="dju-aQ-mev" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.14" id="yad-yW-Uza"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ji8-6h-KRn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vxS-xU-rvK">
+            <objects>
+                <viewController id="1hY-QL-iz5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgu-aw-Ppo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Yo-Aj-fqc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="99t-DT-aar"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K61-kb-11F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5S9-2J-SI5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5p0-WK-ggz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="vEg-YJ-lEP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Tn-w3-Jk1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZI-5q-2K0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hangmanTitle" width="1000" height="239"/>
+        <image name="trees" width="1600" height="847"/>
+    </resources>
 </document>
