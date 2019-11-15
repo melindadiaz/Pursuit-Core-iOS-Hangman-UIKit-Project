@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player One View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayerOneViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="1stPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangmanTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qsz-Kf-Gvl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="139.00000000000006"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="139"/>
                                 <color key="backgroundColor" red="0.57151544989543157" green="0.57151544989543157" blue="0.57151544989543157" alpha="0.57943600170410958" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to 2 Player Hangman!! Player 1, please enter any valid word below. Press submit before passing to 2nd player." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dju-aQ-mev">
@@ -35,6 +35,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardType="alphabet" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no"/>
+                                <connections>
+                                    <action selector="playerOneTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="d2P-a5-kvP"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to 8 lowercase characters are valid. Special characters , accents or spaces are invalid. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-95-8QO">
                                 <rect key="frame" x="62" y="250.5" width="290" height="98"/>
@@ -58,6 +61,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="playerOneSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVH-P3-H9u"/>
                                     <segue destination="1hY-QL-iz5" kind="show" id="4cV-0Z-jDR"/>
                                 </connections>
                             </button>
@@ -91,15 +95,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ji8-6h-KRn"/>
+                    <connections>
+                        <outlet property="invalidResultLabel" destination="sg9-95-8QO" id="blX-jL-IXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Two View Controller-->
         <scene sceneID="vxS-xU-rvK">
             <objects>
-                <viewController id="1hY-QL-iz5" sceneMemberID="viewController">
+                <viewController id="1hY-QL-iz5" customClass="PlayerTwoViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kgu-aw-Ppo" userLabel="2ndPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +118,10 @@
                                 <rect key="frame" x="92" y="422" width="230" height="52"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="hiddenWord:" destination="1hY-QL-iz5" eventType="editingDidEnd" id="40a-JG-oTo"/>
+                                    <action selector="hiddenWord:" destination="4oT-TW-Vfu" eventType="editingDidEnd" id="dLG-FG-myN"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Pick a letter to guess the word. Don't get HANGED!!" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph4-re-MFY">
                                 <rect key="frame" x="92" y="609" width="230" height="63"/>
@@ -133,13 +144,16 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="playerTwoSubmitButton:" destination="1hY-QL-iz5" eventType="touchUpInside" id="CRB-Z5-1od"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-9c-1yP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hang1" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-9c-1yP">
                                 <rect key="frame" x="82" y="194" width="240" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangmanTitle" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cou-6X-Z3Q">
-                                <rect key="frame" x="0.0" y="44" width="414" height="139.00000000000006"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="139"/>
                                 <color key="backgroundColor" red="0.59729273419999995" green="0.59729273419999995" blue="0.59729273419999995" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTB-8n-H0w">
@@ -180,8 +194,14 @@
                         <viewLayoutGuide key="safeArea" id="4Yo-Aj-fqc"/>
                     </view>
                     <navigationItem key="navigationItem" id="99t-DT-aar"/>
+                    <connections>
+                        <outlet property="hangmanImage" destination="FO9-9c-1yP" id="4Iv-j1-0XA"/>
+                        <outlet property="hangmanLabel" destination="cou-6X-Z3Q" id="gGA-t1-8lL"/>
+                        <outlet property="resultLabel" destination="NTB-8n-H0w" id="B6e-Nx-1kk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K61-kb-11F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4oT-TW-Vfu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1844.9275362318842" y="126.5625"/>
         </scene>
@@ -204,6 +224,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hang1" width="150" height="129"/>
         <image name="hangmanTitle" width="1000" height="239"/>
         <image name="trees" width="1600" height="847"/>
     </resources>
