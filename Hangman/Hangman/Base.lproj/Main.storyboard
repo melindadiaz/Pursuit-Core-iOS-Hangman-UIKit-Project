@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5p0-WK-ggz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,30 +24,21 @@
                                 <color key="backgroundColor" red="0.57151544989543157" green="0.57151544989543157" blue="0.57151544989543157" alpha="0.57943600170410958" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to 2 Player Hangman!! Player 1, please enter any valid word below. Press submit before passing to 2nd player." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dju-aQ-mev">
-                                <rect key="frame" x="-20.5" y="390.5" width="455" height="115"/>
+                                <rect key="frame" x="-20.666666666666657" y="390.66666666666669" width="455.33333333333326" height="114.66666666666669"/>
                                 <color key="backgroundColor" red="0.54113791182436555" green="0.54113791182436555" blue="0.54113791182436555" alpha="0.69164704622465745" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Word Here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYC-P3-X4N">
-                                <rect key="frame" x="121" y="545.5" width="172.5" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardType="alphabet" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no"/>
-                                <connections>
-                                    <action selector="playerOneTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="d2P-a5-kvP"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to 8 lowercase characters are valid. Special characters , accents or spaces are invalid. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-95-8QO">
-                                <rect key="frame" x="62" y="250.5" width="290" height="98"/>
+                                <rect key="frame" x="62" y="250.66666666666663" width="290" height="98"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="16"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38B-fW-aYz">
-                                <rect key="frame" x="174" y="609.5" width="66" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38B-fW-aYz">
+                                <rect key="frame" x="174" y="609.33333333333337" width="66" height="33"/>
                                 <color key="backgroundColor" red="0.59729273418984763" green="0.59729273418984763" blue="0.59729273418984763" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -65,6 +56,12 @@
                                     <segue destination="1hY-QL-iz5" kind="show" id="4cV-0Z-jDR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mN-me-Zk6">
+                                <rect key="frame" x="111" y="537" width="196" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -79,13 +76,10 @@
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sp6-G1-dd0"/>
                             <constraint firstAttribute="bottom" secondItem="2S9-Pn-ljH" secondAttribute="bottom" id="Ugn-nv-hQx"/>
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UqM-K6-xc5"/>
-                            <constraint firstItem="38B-fW-aYz" firstAttribute="top" secondItem="SYC-P3-X4N" secondAttribute="bottom" constant="30" id="WQT-yp-Dev"/>
-                            <constraint firstItem="SYC-P3-X4N" firstAttribute="top" secondItem="dju-aQ-mev" secondAttribute="bottom" constant="40" id="XfB-wB-ggJ"/>
                             <constraint firstItem="38B-fW-aYz" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.16" id="YZo-7N-nl7"/>
                             <constraint firstItem="sg9-95-8QO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZnI-5Z-2nf"/>
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bWi-21-XAv"/>
                             <constraint firstItem="sg9-95-8QO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.12" id="dm4-74-Ouc"/>
-                            <constraint firstItem="SYC-P3-X4N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f1U-iX-kOY"/>
                             <constraint firstItem="dju-aQ-mev" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1.1" id="qS9-mj-UYy"/>
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.17" id="sG0-5X-oYx"/>
                             <constraint firstAttribute="trailing" secondItem="qsz-Kf-Gvl" secondAttribute="trailing" id="vUt-RM-hYI"/>
@@ -97,6 +91,7 @@
                     <navigationItem key="navigationItem" id="ji8-6h-KRn"/>
                     <connections>
                         <outlet property="invalidResultLabel" destination="sg9-95-8QO" id="blX-jL-IXc"/>
+                        <outlet property="playerOneHiddenWord" destination="8mN-me-Zk6" id="fHv-fH-Xte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,8 +114,8 @@
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="hiddenWord:" destination="1hY-QL-iz5" eventType="editingDidEnd" id="40a-JG-oTo"/>
                                     <action selector="hiddenWord:" destination="4oT-TW-Vfu" eventType="editingDidEnd" id="dLG-FG-myN"/>
+                                    <action selector="playerTwoGuess:" destination="1hY-QL-iz5" eventType="editingDidEnd" id="40a-JG-oTo"/>
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Pick a letter to guess the word. Don't get HANGED!!" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph4-re-MFY">
@@ -131,7 +126,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-Td-U8C">
-                                <rect key="frame" x="177.5" y="519" width="59" height="33"/>
+                                <rect key="frame" x="177.66666666666666" y="519" width="59" height="33"/>
                                 <color key="backgroundColor" red="0.59729273419999995" green="0.59729273419999995" blue="0.59729273419999995" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -148,10 +143,6 @@
                                     <action selector="playerTwoSubmitButton:" destination="1hY-QL-iz5" eventType="touchUpInside" id="CRB-Z5-1od"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hang1" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-9c-1yP">
-                                <rect key="frame" x="82" y="194" width="240" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangmanTitle" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cou-6X-Z3Q">
                                 <rect key="frame" x="0.0" y="44" width="414" height="139"/>
                                 <color key="backgroundColor" red="0.59729273419999995" green="0.59729273419999995" blue="0.59729273419999995" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
@@ -163,6 +154,18 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hiddenWord" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vW6-AD-DSl">
+                                <rect key="frame" x="93" y="345" width="228" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hang1" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-9c-1yP">
+                                <rect key="frame" x="81" y="121" width="240" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -197,6 +200,7 @@
                     <connections>
                         <outlet property="hangmanImage" destination="FO9-9c-1yP" id="4Iv-j1-0XA"/>
                         <outlet property="hangmanLabel" destination="cou-6X-Z3Q" id="gGA-t1-8lL"/>
+                        <outlet property="hiddenWord" destination="vW6-AD-DSl" id="vra-bR-Lvc"/>
                         <outlet property="resultLabel" destination="NTB-8n-H0w" id="B6e-Nx-1kk"/>
                     </connections>
                 </viewController>

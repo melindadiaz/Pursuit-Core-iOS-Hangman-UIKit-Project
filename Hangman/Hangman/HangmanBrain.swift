@@ -9,38 +9,30 @@
 import UIKit
 
 class GameBrain {
-    var letterBank = "abcdefghijklmnopqrstuvwxyz"
+   
+    //
+    //let playerOneRefernce = PlayerOneViewController()
     var removedLetter = [String]()
-    var userInputLetter = String()
-    var gameReference = PlayerOneViewController()
+    var hiddenWord = String()
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-          guard let textFieldText = textField.text else {
-              return false
-          } //below is used to allow the user to delete when they made a mistake
-          let char = string.cString(using: String.Encoding.utf8)!
-          let isBackSpace = strcmp(char, "\\b")
-          if !letterBank.contains(string) && isBackSpace != -92 { //this is backspace
-            gameReference.invalidResultLabel.text = "Invalid Input"
-              return false
-          }
-          if isBackSpace == -92 {
-              putBackLetter(x: string)
-          } else {
-              //removedLetter(userInputLetter: string)
-          }
-          return true
-          
-      }
-    
-    func putBackLetter(x:String) {
-         let char = x.cString(using: String.Encoding.utf8)!
-         let isBackSpace = strcmp(char, "\\b")
-         if isBackSpace == -92 {
-             letterBank.append(removedLetter.popLast() ?? "")
-        }
+  
     
     
     
-}
+//    //this fuhnction allows the user to type only the letters in the letterbank
+   
+//      }
+//    
+//   
+//    
+//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            guard let textFieldText = textField.text else {
+//                return true
+//            }
+//            if letterBank.contains(textFieldText) {
+//                result
+//            }
+//        }
+    
+//}
 }
