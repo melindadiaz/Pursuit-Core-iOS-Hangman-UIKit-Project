@@ -37,31 +37,24 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38B-fW-aYz">
-                                <rect key="frame" x="174" y="609.33333333333337" width="66" height="33"/>
-                                <color key="backgroundColor" red="0.59729273418984763" green="0.59729273418984763" blue="0.59729273418984763" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Submit">
-                                            <attributes>
-                                                <color key="NSColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="17" name="BradleyHandITCTT-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="playerOneSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVH-P3-H9u"/>
-                                    <segue destination="1hY-QL-iz5" kind="show" id="4cV-0Z-jDR"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mN-me-Zk6">
                                 <rect key="frame" x="111" y="537" width="196" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38B-fW-aYz">
+                                <rect key="frame" x="174" y="609" width="66" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.59729273418984763" green="0.59729273418984763" blue="0.59729273418984763" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerOneSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVH-P3-H9u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -72,11 +65,9 @@
                             <constraint firstItem="dju-aQ-mev" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HYR-6s-8qw"/>
                             <constraint firstItem="sg9-95-8QO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="Ja8-F8-kun"/>
                             <constraint firstItem="dju-aQ-mev" firstAttribute="top" secondItem="sg9-95-8QO" secondAttribute="bottom" constant="42" id="ObZ-iQ-i5s"/>
-                            <constraint firstItem="38B-fW-aYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfl-Wf-sJO"/>
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sp6-G1-dd0"/>
                             <constraint firstAttribute="bottom" secondItem="2S9-Pn-ljH" secondAttribute="bottom" id="Ugn-nv-hQx"/>
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UqM-K6-xc5"/>
-                            <constraint firstItem="38B-fW-aYz" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.16" id="YZo-7N-nl7"/>
                             <constraint firstItem="sg9-95-8QO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZnI-5Z-2nf"/>
                             <constraint firstItem="qsz-Kf-Gvl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bWi-21-XAv"/>
                             <constraint firstItem="sg9-95-8QO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.12" id="dm4-74-Ouc"/>
@@ -101,7 +92,7 @@
         <!--Player Two View Controller-->
         <scene sceneID="vxS-xU-rvK">
             <objects>
-                <viewController id="1hY-QL-iz5" customClass="PlayerTwoViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerTwoViewController" id="1hY-QL-iz5" customClass="PlayerTwoViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kgu-aw-Ppo" userLabel="2ndPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,13 +100,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-AH-hbP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="playeronesword" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-bV-Zx3">
-                                <rect key="frame" x="92" y="422" width="230" height="52"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="playeronesword" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-bV-Zx3">
+                                <rect key="frame" x="93" y="422" width="230" height="52"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="hiddenWord:" destination="4oT-TW-Vfu" eventType="editingDidEnd" id="dLG-FG-myN"/>
-                                    <action selector="playerTwoGuess:" destination="1hY-QL-iz5" eventType="editingDidEnd" id="40a-JG-oTo"/>
+                                    <action selector="playerTwoGuess:" destination="1hY-QL-iz5" eventType="editingDidEnd" id="b6U-K2-ssg"/>
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Pick a letter to guess the word. Don't get HANGED!!" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph4-re-MFY">
@@ -125,24 +115,6 @@
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-Td-U8C">
-                                <rect key="frame" x="177.66666666666666" y="519" width="59" height="33"/>
-                                <color key="backgroundColor" red="0.59729273419999995" green="0.59729273419999995" blue="0.59729273419999995" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Submit">
-                                            <attributes>
-                                                <color key="NSColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="17" name="BradleyHandITCTT-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="playerTwoSubmitButton:" destination="1hY-QL-iz5" eventType="touchUpInside" id="CRB-Z5-1od"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangmanTitle" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cou-6X-Z3Q">
                                 <rect key="frame" x="0.0" y="44" width="414" height="139"/>
                                 <color key="backgroundColor" red="0.59729273419999995" green="0.59729273419999995" blue="0.59729273419999995" alpha="0.73394691779999999" colorSpace="custom" customColorSpace="displayP3"/>
@@ -154,7 +126,7 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hiddenWord" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vW6-AD-DSl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vW6-AD-DSl">
                                 <rect key="frame" x="93" y="345" width="228" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -169,13 +141,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CH3-Td-U8C" firstAttribute="top" secondItem="ioa-bV-Zx3" secondAttribute="bottom" constant="45" id="3CA-jt-ySX"/>
                             <constraint firstAttribute="trailing" secondItem="NUx-AH-hbP" secondAttribute="trailing" id="5vA-Ys-FPm"/>
                             <constraint firstItem="NUx-AH-hbP" firstAttribute="centerX" secondItem="kgu-aw-Ppo" secondAttribute="centerX" id="7XK-cf-xxk"/>
                             <constraint firstItem="4Yo-Aj-fqc" firstAttribute="bottom" secondItem="NTB-8n-H0w" secondAttribute="bottom" constant="125" id="7im-Io-eht"/>
-                            <constraint firstItem="CH3-Td-U8C" firstAttribute="centerX" secondItem="kgu-aw-Ppo" secondAttribute="centerX" id="AVa-Yw-Znk"/>
                             <constraint firstItem="4Yo-Aj-fqc" firstAttribute="trailing" secondItem="ph4-re-MFY" secondAttribute="trailing" constant="92" id="AX2-bC-g7T"/>
-                            <constraint firstItem="CH3-Td-U8C" firstAttribute="width" secondItem="4Yo-Aj-fqc" secondAttribute="width" multiplier="0.142512" id="J96-2B-lbx"/>
                             <constraint firstItem="ioa-bV-Zx3" firstAttribute="centerX" secondItem="kgu-aw-Ppo" secondAttribute="centerX" id="L6d-FS-Sed"/>
                             <constraint firstAttribute="bottom" secondItem="NUx-AH-hbP" secondAttribute="bottom" id="MTH-dO-Q2k"/>
                             <constraint firstItem="NTB-8n-H0w" firstAttribute="top" secondItem="ph4-re-MFY" secondAttribute="bottom" constant="35" id="N0t-cp-y0X"/>
@@ -188,7 +157,6 @@
                             <constraint firstItem="NUx-AH-hbP" firstAttribute="top" secondItem="kgu-aw-Ppo" secondAttribute="top" id="esR-UJ-bTH"/>
                             <constraint firstItem="ph4-re-MFY" firstAttribute="centerX" secondItem="kgu-aw-Ppo" secondAttribute="centerX" id="fin-8O-Sfx"/>
                             <constraint firstItem="ph4-re-MFY" firstAttribute="height" secondItem="4Yo-Aj-fqc" secondAttribute="height" multiplier="0.0770171" id="gMU-SW-cwx"/>
-                            <constraint firstItem="ph4-re-MFY" firstAttribute="top" secondItem="CH3-Td-U8C" secondAttribute="bottom" constant="57" id="mDu-Qr-A1n"/>
                             <constraint firstItem="cou-6X-Z3Q" firstAttribute="height" secondItem="4Yo-Aj-fqc" secondAttribute="height" multiplier="0.17" id="nTl-WG-HjU"/>
                             <constraint firstItem="NTB-8n-H0w" firstAttribute="width" secondItem="4Yo-Aj-fqc" secondAttribute="width" multiplier="0.55" id="usF-YO-gX5"/>
                             <constraint firstItem="cou-6X-Z3Q" firstAttribute="width" secondItem="4Yo-Aj-fqc" secondAttribute="width" id="wiy-PD-kGd"/>
@@ -205,7 +173,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K61-kb-11F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="4oT-TW-Vfu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1844.9275362318842" y="126.5625"/>
         </scene>
