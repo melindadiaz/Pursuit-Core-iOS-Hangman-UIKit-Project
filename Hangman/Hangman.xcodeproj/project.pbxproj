@@ -39,6 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DE62F7023FAE3D300A3781D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57FCB5F521A36D3D00163B8E /* PlayerOneViewController.swift */,
+				4DE8BA9B237E1E26001DA70A /* PlayerTwoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4DE62F7123FAE3E900A3781D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DE8BA99237E0B12001DA70A /* HangmanBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		57FCB5E721A36D3D00163B8E = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				57FCB5F321A36D3D00163B8E /* AppDelegate.swift */,
-				57FCB5F521A36D3D00163B8E /* PlayerOneViewController.swift */,
-				4DE8BA9B237E1E26001DA70A /* PlayerTwoViewController.swift */,
-				4DE8BA99237E0B12001DA70A /* HangmanBrain.swift */,
+				4DE62F7123FAE3E900A3781D /* Model */,
+				4DE62F7023FAE3D300A3781D /* Controllers */,
 				57FCB5F721A36D3D00163B8E /* Main.storyboard */,
 				57FCB5FA21A36D3E00163B8E /* Assets.xcassets */,
 				57FCB5FC21A36D3E00163B8E /* LaunchScreen.storyboard */,
